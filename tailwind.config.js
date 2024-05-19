@@ -9,6 +9,9 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    fontFamily: {
+      'sans': ['"Poetsen One"']
+    },
     container: {
       center: true,
       padding: "2rem",

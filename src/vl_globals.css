@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
 :root {
   --star-pattern-start-rgb: 0, 255, 204;
   --star-pattern-end-rgb: 0, 179, 143;
@@ -31,7 +33,7 @@
 }
 
 .star-pattern {
-  background-image: url("../public/images/Star_Pattern_3.svg");
+  background-image: url("/images/Star_Pattern_3.svg");
   background-size: 10%;
   animation: pan 180s linear infinite;
   height: 100%;
@@ -67,7 +69,7 @@
   left: 50%;
   bottom: 0px;
   translate: -50% 0%;
-  height: 48vh;
+  height: 50vh;
   min-height: 240px;
   width: 100%;
   min-width: 2000px;
@@ -180,12 +182,36 @@
 
 .logo-attribution {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   left: 50%;
   transform: translate(-50%, 0);
   height: fit-content;
-  width: fit-content;
+  width: 100%;
   text-align: center;
   font-size: 0.7rem;
   color: rgb(0 0 0 / 40%);
+}
+
+.grid-parent {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+}
+
+.grid-input {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.grid-output {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
