@@ -1,9 +1,7 @@
 name: Test with Cypress
 
 on:
-  push:
-    branches:
-      - "master"
+  [push]
   pull_request:
   workflow_dispatch:
 
