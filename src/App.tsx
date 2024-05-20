@@ -4,7 +4,7 @@ import StringCalcInput from "./components/input/StringCalcInput";
 import StringCalcOutput from "./components/output/StringCalcOutput";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [sum, setSum] = useState(0);
 
   return (
     <>
@@ -12,15 +12,15 @@ function App() {
         <div className="relative z-10 grid-parent">
           <div className="grid-input">
             <div className="relative flex flex-wrap content-center justify-center pt-10 pb-5">
-              <h1 className="w-[100%] text-center italic text-2xl text-yellow-400 drop-shadow-[2px_3px_1px_black]">Vinnie's fancy</h1>
+              <h1 className="w-[100%] text-center italic text-2xl text-yellow-400 drop-shadow-[2px_3px_1px_black] mb-2">Vinnie's fancy</h1>
               <img src="/images/logo.png"></img>
             </div>
             <div className="relative md:px-[20%]">
-              <StringCalcInput />
+              <StringCalcInput setSum={setSum} />
             </div>
           </div>
           <div className="grid-output self-start pt-20">
-            <StringCalcOutput />
+            <StringCalcOutput getSum={sum} />
 
             <div className="logo-attribution">
               ©2024 Vincent Leung
