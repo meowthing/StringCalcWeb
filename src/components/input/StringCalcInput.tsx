@@ -41,15 +41,17 @@ function StringCalcInput(props: {
     <div className="flex flex-wrap gap-3">
       <Input
         className="flex-auto w-[75%]"
-        placeholder="Enter some numbers separated by commas e.g. '2,3'"
+        placeholder="e.g. '2,3'"
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={HandleKeyDown}
+        data-test="calc-input"
       ></Input>
       <Button
         type="button"
         onClick={InputSubmitted}
         className="flex-auto w-fit"
+        data-test="calc-input-button"
       >
         Calculate!
       </Button>
