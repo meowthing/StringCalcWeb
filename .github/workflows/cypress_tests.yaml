@@ -28,5 +28,5 @@ jobs:
       - name: Cypress tests
         uses: cypress-io/github-action@v6
         with:
-          project: ./dist          
-          build: npx cypress info
+          project: ../dist          
+          build: npx cypress run
