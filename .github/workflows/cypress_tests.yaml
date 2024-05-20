@@ -1,0 +1,12 @@
+name: cypress-tests
+
+on: deployment
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/vercel-cypress@v1
+        with:
+          vercels-token: ${{ secrets.VERCEL_KEY }}
+          repo: StringCalcWeb
