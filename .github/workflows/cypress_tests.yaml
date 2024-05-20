@@ -1,12 +1,19 @@
-name: cypress-tests
+name: Test with Cypress
 
-on: deployment
+on: [push]
 
 jobs:
-  regression:
+  install: 
     runs-on: ubuntu-latest
-    steps:
-      - uses: mikefrancis/vercel-cypress@v1
-        with:
-          vercels-token: ${{ secrets.VERCEL_KEY }}
-          repo: StringCalcWeb
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v3
+        with: 
+          project: ./site
+          browser: chrome
+          build: pnpm build
+          start: pnpm start
+          wait-on: "http://localhost:5173"
