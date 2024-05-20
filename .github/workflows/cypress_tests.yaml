@@ -2,8 +2,6 @@ name: Test with Cypress
 
 on:
   [push]
-  pull_request:
-  workflow_dispatch:
 
 jobs:
 
