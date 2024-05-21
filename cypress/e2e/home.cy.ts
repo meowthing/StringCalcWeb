@@ -1,6 +1,6 @@
 describe("Home Page", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:5174");
+    cy.visit("http://localhost:5173");
   });
 
   it("Displays an input and a button that says 'Calculate'", () => {
