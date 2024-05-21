@@ -29,6 +29,6 @@ jobs:
         uses: cypress-io/github-action@v6
         with:    
           browser: chrome
-          build: pnpm run build
-          start: pnpm run preview, pnpm run cypress:run
-          wait-on: 'http://localhost:5173'
+          build: pnpm run build          
+          wait-on: http://localhost:5173
+          start: npx vite --host
